@@ -35,7 +35,7 @@ func BindJSON(r *http.Request, obj interface{}, dupBody bool) error {
 	return json.Unmarshal(b, obj)
 }
 
-func BizMessage(w http.ResponseWriter, code int, message string, obj interface{}) error {
+func BizMessage(w http.ResponseWriter, code int, message string) error {
 	b, err := json.Marshal(map[string]interface{}{
 		"code":    code,
 		"message": message,
