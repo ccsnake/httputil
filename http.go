@@ -2,9 +2,9 @@ package httputil
 
 import (
 	"bytes"
-	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	json "github.com/json-iterator/go"
 )
 
 func String(rw http.ResponseWriter, code int, str string) {
